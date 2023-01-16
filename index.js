@@ -10,6 +10,10 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+app.get("/",(req,res)=>{
+    res.send("welcome")
+})
+
 app.use("/users",user_router)
 app.use(authentication)
 app.use("/posts",post_route)
